@@ -122,9 +122,9 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Badge
-                containerStyles={"absolute top-[50%] -left-[35rem] scale-75"}
+                containerStyles={"absolute top-[50%] -left-[35rem] scale-90 z-50 bg-white dark:bg-black border-2 border-primary shadow-lg p-4 rounded-xl flex items-center justify-center"}
                 icon={<RiBriefcase4Fill />}
-                endCountNum={3}
+                endCountNum={4}
                 badgeText={"Years of Experience"}
               />
             </motion.div>
