@@ -16,13 +16,10 @@ function Form(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, message } = formData;
-
     // Create mailto link with pre-filled data
     const mailtoLink = `mailto:leul0593@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-
     // Open default email client
     window.location.href = mailtoLink;
-
     // Reset form
     setFormData({
       name: "",
@@ -33,9 +30,9 @@ function Form(props) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 

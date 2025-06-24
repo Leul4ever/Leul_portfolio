@@ -76,7 +76,7 @@ const Hero = () => {
                     Contact Me <Send size={16} className="sm:w-5 sm:h-5 w-4 h-4" />
                   </Button>
                 </Link>
-                <Link href="/cv/Leul_Abera_CV.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Link href="/cv/cv.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button variant="secondary" className="w-full sm:w-auto gap-x-2 hover:scale-105 transition-transform text-sm sm:text-base">
                     Download CV <Download size={16} className="sm:w-5 sm:h-5 w-4 h-4" />
                   </Button>
