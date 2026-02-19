@@ -17,10 +17,6 @@ const infoData = [
         text: "BSc in Computer Science",
     },
     {
-        icon: <TrophyIcon size={28} />,
-        text: "Huawei National Cloud-AI Track Winner",
-    },
-    {
         icon: <AwardIcon size={28} />,
         text: "ALX Software Engineering Graduate",
     },
@@ -64,13 +60,7 @@ const qualificationData = {
 const achievements = {
     "Awards and Winings": {
         title: "Awards and Winings",
-        data: [
-            {
-                competition: "Huawei National Cloud-AI Track",
-                ranking: "1st place",
-                url: "https://example.com/huawei",
-            },
-        ],
+        data: [],
     },
     "Licenses & Certifications": {
         title: "Licenses & Certifications",
@@ -80,12 +70,6 @@ const achievements = {
                 issued: "12th April 2024",
                 skill: "Back-end Development",
                 links: "https://example.com/alx",
-            },
-            {
-                name: "Huawei Competition",
-                issued: "2023",
-                skill: "Cloud & AI",
-                links: "https://example.com/huawei",
             },
         ],
     },

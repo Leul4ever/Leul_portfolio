@@ -71,7 +71,7 @@ function Form(props) {
         <MessageSquare className="absolute top-8 right-6" size={20} />
       </div>
       <Button type="submit" className="flex items-center max-w-[166px]">
-        Let's Talk
+        Let's Talk 
         <ArrowRightIcon size={20} />
       </Button>
     </form>

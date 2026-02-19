@@ -31,12 +31,12 @@ const Header = () => {
         } sticky top-0 z-20 transition-all ${pathname === "/" && "bg-[#fef9f5]"}`}
     >
       <div className="container mx-auto">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center">
           <Link href="/" className="text-2xl font-bold">
             Leul Abera
           </Link>
-          <div className="flex items-center gap-4">
-            <nav className="flex gap-4">
+          <div className="ml-auto flex items-center gap-4">
+            <nav className="hidden xl:flex gap-4">
               <Link href="/" className="hover:text-primary transition-colors">
                 Home
               </Link>
@@ -54,10 +54,9 @@ const Header = () => {
               </Link>
             </nav>
             <ThemeToggle />
-          </div>
-          {/* {Mobile Nav} */}
-          <div className="xl:hidden">
-            <MobileNav />
+            <div className="xl:hidden">
+              <MobileNav />
+            </div>
           </div>
         </div>
       </div>
