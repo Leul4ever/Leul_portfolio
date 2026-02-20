@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Blocks, GanttChartSquare, Gem, Rocket } from "lucide-react";
+import { Brain, Blocks, Gem, Rocket } from "lucide-react";
 
 const serviceData = [
     {
-        icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
-        title: "Web Design",
-        header: "Crafting Digital Experiences",
-        description: "Creating intuitive, responsive, and visually stunning websites that engage users and drive results. Every pixel is placed with purpose.",
-        color: "from-blue-500/20 to-blue-600/20",
-        iconColor: "text-blue-500",
+        icon: <Brain size={72} strokeWidth={0.8} />,
+        title: "ML and Generative AI Development",
+        header: "Intelligent Solutions",
+        description: "Building state-of-the-art Generative AI applications, RAG pipelines, and custom LLM solutions tailored for business automation and insights.",
+        color: "from-cyan-500/20 to-cyan-600/20",
+        iconColor: "text-cyan-500",
     },
     {
         icon: <Blocks size={72} strokeWidth={0.8} />,

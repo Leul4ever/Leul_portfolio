@@ -304,6 +304,33 @@ export const projectData = [
     github: "https://github.com/Leul4ever",
   },
   {
+    image: "/work/fintech_reviews_viz.png",
+    category: "ML and AI",
+    name: "Customer Experience Analytics for Fintech Apps",
+    description:
+      "A comprehensive pipeline for collecting and analyzing 1,200+ Google Play Store reviews for Ethiopian banking apps. Features sentiment analysis using fine-tuned DistilBERT and thematic categorization to identify key customer pain points.",
+    link: "https://github.com/Leul4ever/fintech-reviews-analysis",
+    github: "https://github.com/Leul4ever/fintech-reviews-analysis",
+  },
+  {
+    image: "/work/fin_inclusion_viz.png",
+    category: "ML and AI",
+    name: "Financial Inclusion Forecasting",
+    description:
+      "Regression-based simulation framework to model national financial trends. Quantified the economic impact of mobile money platforms (Telebirr/M-Pesa) on GDP, supporting strategic digital transformation planning with high-accuracy forecasts.",
+    link: "https://github.com/Leul4ever/Ethio-Finance-forecast",
+    github: "https://github.com/Leul4ever/Ethio-Finance-forecast",
+  },
+  {
+    image: "/work/oil_analysis_viz.png",
+    category: "ML and AI",
+    name: "Brent Oil Price Change Point Analysis",
+    description:
+      "Bayesian modeling project to detect latent shift points in global oil prices. Utilizes MCMC sampling (PyMC) and NUTS sampler for regime quantification. Features an interactive React/Flask dashboard for real-time impact analysis.",
+    link: "https://github.com/Leul4ever/oil-change-point-analysis",
+    github: "https://github.com/Leul4ever/oil-change-point-analysis",
+  },
+  {
     image: "/work/rag_dashboard.png",
     category: "ML and AI",
     name: "CrediTrust: Intelligent Complaint Analysis (RAG)",
@@ -347,33 +374,6 @@ export const projectData = [
       "Developing a credit scoring model using alternative e-commerce transaction behavior. Implemented RFM analysis and K-Means clustering for risk segmentation, with Logistic Regression and Gradient Boosting comparison for regulatory compliance.",
     link: "https://github.com/Leul4ever/credit-risk-model",
     github: "https://github.com/Leul4ever/credit-risk-model",
-  },
-  {
-    image: "/work/oil_analysis_viz.png",
-    category: "ML and AI",
-    name: "Brent Oil Price Change Point Analysis",
-    description:
-      "Bayesian modeling project to detect latent shift points in global oil prices. Utilizes MCMC sampling (PyMC) and NUTS sampler for regime quantification. Features an interactive React/Flask dashboard for real-time impact analysis.",
-    link: "https://github.com/Leul4ever/oil-change-point-analysis",
-    github: "https://github.com/Leul4ever/oil-change-point-analysis",
-  },
-  {
-    image: "/work/fin_sentiment_ai.png",
-    category: "ML and AI",
-    name: "Fin-Insight: Financial Sentiment & Stock Correlation",
-    description:
-      "Analyzing the relationship between market sentiment from news headlines and stock price movements. Implemented VADER sentiment analysis for 1.4M+ articles and performed lagged correlation studies to identify predictive market patterns.",
-    link: "https://github.com/Leul4ever/financial-sentiment-week1",
-    github: "https://github.com/Leul4ever/financial-sentiment-week1",
-  },
-  {
-    image: "/work/fin_inclusion_viz.png",
-    category: "ML and AI",
-    name: "Financial Inclusion Forecasting",
-    description:
-      "Regression-based simulation framework to model national financial trends. Quantified the economic impact of mobile money platforms (Telebirr/M-Pesa) on GDP, supporting strategic digital transformation planning with high-accuracy forecasts.",
-    link: "https://github.com/Leul4ever/Ethio-Finance-forecast",
-    github: "https://github.com/Leul4ever/Ethio-Finance-forecast",
   },
   {
     image: "/work/portfolio_backtest.png",

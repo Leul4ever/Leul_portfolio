@@ -77,7 +77,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-y-3 gap-x-3 mx-auto xl:mx-0 mb-6 sm:mb-12 px-4 sm:px-0"
               >
-                <Link href="/contact" className="w-full sm:w-auto">
+                <Link href="#contact" className="w-full sm:w-auto">
                   <Button className="w-full sm:w-auto gap-x-2 hover:scale-105 transition-transform text-sm sm:text-base shadow-lg shadow-primary/20">
                     Contact Me <Send size={16} className="sm:w-5 sm:h-5 w-4 h-4" />
                   </Button>
