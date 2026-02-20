@@ -1,120 +1,78 @@
+"use client";
+import React, { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Github, Globe } from "lucide-react";
+import { projectData } from "@/constants";
 
-const projects = [
-    {
-        title: "E-Commerce Platform",
-        description: "A full-featured e-commerce platform built with Next.js and Flutter, featuring real-time inventory management and secure payment processing.",
-        tech: ["Next.js", "Flutter", "Node.js", "MongoDB"],
-        github: "https://github.com/yourusername/ecommerce",
-        live: "https://ecommerce-demo.com",
-    },
-    {
-        title: "Task Management App",
-        description: "A collaborative task management application with real-time updates, team features, and progress tracking.",
-        tech: ["React", "Firebase", "Material-UI"],
-        github: "https://github.com/yourusername/task-manager",
-        live: "https://task-manager-demo.com",
-    },
-    {
-        title: "Portfolio Website",
-        description: "A modern portfolio website showcasing projects and skills with smooth animations and responsive design.",
-        tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-        github: "https://github.com/yourusername/portfolio",
-        live: "https://portfolio-demo.com",
-    },
+// Force a specific order for categories
+const uniqueCategories = [
+    "all projects",
+    "full stack",
+    "mobile app",
+    "ml and ai",
 ];
 
 const Projects = () => {
+    const [category, setCategory] = useState("all projects");
+
+    const filteredProjects = projectData.filter((project) => {
+        return category === "all projects"
+            ? project
+            : project.category.toLowerCase() === category;
+    });
+
     return (
-        <section className="section relative">
+        <section className="min-h-[600px] pt-12 xl:pt-24 pb-12 xl:pb-24">
             <div className="container mx-auto">
-                <div className="flex flex-col xl:flex-row gap-x-8">
-                    {/* text */}
-                    <div className="text-center xl:text-left mb-12 xl:mb-0">
-                        <motion.h2
-                            variants={fadeIn("up", 0.2)}
-                            initial="hidden"
-                            animate="show"
-                            exit="hidden"
-                            className="h2 mb-4"
-                        >
-                            My Projects <span className="text-accent">.</span>
-                        </motion.h2>
-                        <motion.p
-                            variants={fadeIn("up", 0.4)}
-                            initial="hidden"
-                            animate="show"
-                            exit="hidden"
-                            className="mb-8 max-w-[400px] mx-auto xl:mx-0"
-                        >
-                            Check out some of my recent projects that showcase my skills and experience in web and mobile development.
-                        </motion.p>
-                        <motion.div
-                            variants={fadeIn("up", 0.6)}
-                            initial="hidden"
-                            animate="show"
-                            exit="hidden"
-                        >
-                            <Button className="w-full xs:w-auto">
-                                View all projects
-                                <ArrowRight className="ml-2" />
-                            </Button>
-                        </motion.div>
-                    </div>
-                    {/* projects */}
-                    <motion.div
-                        variants={fadeIn("down", 0.6)}
-                        initial="hidden"
-                        animate="show"
-                        exit="hidden"
-                        className="w-full xl:max-w-[65%]"
-                    >
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {projects.map((project, index) => (
-                                <Card key={index} className="group">
-                                    <CardHeader>
-                                        <CardTitle className="text-xl font-bold mb-2">{project.title}</CardTitle>
-                                        <CardDescription className="text-base">{project.description}</CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {project.tech.map((tech, i) => (
-                                                <span
-                                                    key={i}
-                                                    className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full"
-                                                >
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
-                                        <div className="flex gap-4">
-                                            <Button variant="outline" size="sm" className="w-full" asChild>
-                                                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                                    <Github className="mr-2 h-4 w-4" />
-                                                    GitHub
-                                                </a>
-                                            </Button>
-                                            <Button variant="outline" size="sm" className="w-full" asChild>
-                                                <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                                    <Globe className="mr-2 h-4 w-4" />
-                                                    Live Demo
-                                                </a>
-                                            </Button>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            ))}
+                <motion.h2
+                    variants={fadeIn("up", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="section-title mb-8 xl:mb-16 text-center mx-auto"
+                >
+                    My projects
+                </motion.h2>
+
+                <Tabs defaultValue={category} className="mb-24 xl:mb-32">
+                    <TabsList className="w-full grid h-full grid-cols-2 md:grid-cols-4 lg:max-w-[700px] mb-12 mx-auto md:border dark:border-none backdrop-blur-[10px] bg-white/10 dark:bg-black/20 border border-white/20 dark:border-primary/20 shadow-xl overflow-hidden rounded-[20px] md:rounded-full p-1">
+                        {uniqueCategories.map((cat, index) => {
+                            return (
+                                <TabsTrigger
+                                    onClick={() => setCategory(cat)}
+                                    value={cat}
+                                    key={index}
+                                    className="capitalize px-4 py-3 md:py-2 text-sm md:text-base rounded-[15px] md:rounded-full data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:text-black transition-all duration-300 font-medium"
+                                >
+                                    {cat}
+                                </TabsTrigger>
+                            );
+                        })}
+                    </TabsList>
+
+                    <TabsContent value={category}>
+                        <div className="text-lg grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            {filteredProjects.map((project, index) => {
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        variants={fadeIn("up", 0.4 + (index % 3) * 0.1)}
+                                        initial="hidden"
+                                        whileInView={"show"}
+                                        viewport={{ once: false, amount: 0.2 }}
+                                    >
+                                        <ProjectCard project={project} />
+                                    </motion.div>
+                                );
+                            })}
                         </div>
-                    </motion.div>
-                </div>
+                    </TabsContent>
+                </Tabs>
             </div>
         </section>
     );
 };
 
-export default Projects; 
+export default Projects;

@@ -9,35 +9,8 @@ import "swiper/css/pagination";
 import ProjectCard from "@/components/ProjectCard";
 import { Pagination } from "swiper/modules";
 
-const projectData = [
-  {
-    image: "/work/ssgi.png",
-    category: "fullstack",
-    name: "SSGI NET",
-    description:
-      "SSGI-NET is a platform that would revolutionize research collaboration within SSGI, and then meticulously brought it to life with industry-standard practices like TDD and clean architecture.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/addis.png",
-    category: "fullstack",
-    name: "Addis Ride",
-    description:
-      "Hop on Addis Ride, the app redefining Addis Ababa's transportation landscape. Experience the convenience of ride-sharing with a reliable network of drivers, all at your fingertips.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/nexus-deep.png",
-    category: "Fintech, AI",
-    name: "Nexus Deep",
-    description:
-      "Investment Link isn't just a platform; it's a groundbreaking bridge connecting Ethiopian diaspora investors with the homeland's promising ventures.",
-    link: "/",
-    github: "/",
-  },
-];
+import { projectData } from "@/constants";
+
 function Work(props) {
   return (
     <section className="relative mb-8 xl:mb-32">
@@ -66,7 +39,7 @@ function Work(props) {
               modules={[Pagination]}
               pagination={{ clickable: true }}
             >
-              {projectData.slice(0.4).map((project, index) => {
+              {projectData.slice(0, 4).map((project, index) => {
                 return (
                   <SwiperSlide key={index}>
                     <ProjectCard project={project} />

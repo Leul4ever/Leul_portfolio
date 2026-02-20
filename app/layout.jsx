@@ -6,12 +6,13 @@ import { Toaster } from "@/components/ui/toaster";
 // components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SocialBar from "@/components/SocialBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Leul Abera",
-  description: "Full Stack Developer Portfolio",
+  title: "Leul Abera | Full Stack Software Engineer",
+  description: "Portfolio of Leul Abera, a Full Stack Developer specializing in Web and Mobile applications with React, Next.js, and Flutter.",
 };
 
 export default function RootLayout({ children }) {
@@ -24,10 +25,15 @@ export default function RootLayout({ children }) {
           enableSystem={false}
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
-          <Toaster />
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <SocialBar />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+            <Toaster />
+          </div>
         </ThemeProvider>
       </body>
     </html>

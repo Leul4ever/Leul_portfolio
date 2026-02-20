@@ -36,23 +36,11 @@ const Header = () => {
             Leul Abera
           </Link>
           <div className="ml-auto flex items-center gap-4">
-            <nav className="hidden xl:flex gap-4">
-              <Link href="/" className="hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link href="/#about" className="hover:text-primary transition-colors">
-                About
-              </Link>
-              <Link href="/#services" className="hover:text-primary transition-colors">
-                Services
-              </Link>
-              <Link href="/#projects" className="hover:text-primary transition-colors">
-                Projects
-              </Link>
-              <Link href="/#contact" className="hover:text-primary transition-colors">
-                Contact
-              </Link>
-            </nav>
+            <Navbar
+              containerStyles="hidden xl:flex items-center gap-x-8"
+              linkStyles="relative hover:text-primary transition-all"
+              underlineStyles="absolute left-0 top-full h-[2px] bg-primary w-full"
+            />
             <ThemeToggle />
             <div className="xl:hidden">
               <MobileNav />

@@ -2,14 +2,10 @@ import Socials from "@/components/Socials";
 
 function Footer(props) {
   return (
-    <footer className="bg-secondary py-12">
-      <div className="flex flex-col justify-between items-center">
-        <Socials
-          containerStyles="flex gap-x-6 mx-auto xl:mx-0 mb-4"
-          iconsStyles="text-primary text-white/70 dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all"
-        />
-        <div className="text-muted-foreground">
-          Copyright &copy; Leul Abera. All rights reserved.
+    <footer className="bg-secondary/80 backdrop-blur-md py-8 border-t border-white/5 mt-auto">
+      <div className="container mx-auto flex flex-col items-center">
+        <div className="text-muted-foreground text-sm font-medium tracking-wider">
+          Copyright &copy; Leul Abera. All rights reserved. {new Date().getFullYear()}
         </div>
       </div>
     </footer>

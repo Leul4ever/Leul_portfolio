@@ -7,55 +7,7 @@ import { Briefcase, GraduationCap, TrophyIcon, AwardIcon } from "lucide-react";
 import Paragraph from "./ui/paragraph";
 import StarsCanvas from "./StarBackground";
 
-const infoData = [
-    {
-        icon: <Briefcase size={28} />,
-        text: "Full Stack Developer",
-    },
-    {
-        icon: <GraduationCap size={28} />,
-        text: "BSc in Computer Science",
-    },
-    {
-        icon: <AwardIcon size={28} />,
-        text: "ALX Software Engineering Graduate",
-    },
-];
-
-const qualificationData = {
-    experience: {
-        title: "Experience",
-        data: [
-            {
-                company: "Insa",
-                role: "Software Application Developer",
-                years: "2025 - Present",
-            },
-            {
-                company: "Freelance",
-                role: "Full Stack Mobile App and Web Developer",
-                years: "2022 - Present",
-            },
-        ],
-    },
-    education: {
-        title: "Education",
-        data: [
-            {
-                university: "ALX",
-                qualification: "Software Engineering",
-                grade: "Distinction",
-                years: "2023 - 2024",
-            },
-            {
-                university: "Arba Minch University",
-                qualification: "BSc in Software Engineering",
-                grade: "First Class",
-                years: "2019 - 2024",
-            },
-        ],
-    },
-};
+import { infoData, qualificationData } from "@/constants/index";
 
 const achievements = {
     "Awards and Winings": {
