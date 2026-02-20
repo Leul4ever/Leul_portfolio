@@ -16,7 +16,6 @@ import {
 
 // components
 import Badge from "./Badge";
-import Socials from "./Socials";
 import HeaderText from "./ui/header-text";
 
 const Hero = () => {
@@ -88,19 +87,6 @@ const Hero = () => {
                     Download CV <Download size={16} className="sm:w-5 sm:h-5 w-4 h-4" />
                   </Button>
                 </Link>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="mb-4 sm:mb-0"
-              >
-                <Socials
-                  containerStyles={"flex gap-x-4 sm:gap-x-8 mx-auto xl:mx-2"}
-                  iconStyles={
-                    "text-foreground text-[22px] sm:text-[32px] hover:text-primary transition-all hover:scale-125 block"
-                  }
-                />
               </motion.div>
             </div>
           </div>

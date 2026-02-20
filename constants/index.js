@@ -331,7 +331,7 @@ export const projectData = [
     github: "https://github.com/Leul4ever/fraud-detection",
   },
   {
-    image: "/work/medical_api.png",
+    image: "/work/medical_insights_ai.png",
     category: "ML and AI",
     name: "Telegram Medical Insights: AI ELT Pipeline",
     description:
@@ -358,7 +358,7 @@ export const projectData = [
     github: "https://github.com/Leul4ever/oil-change-point-analysis",
   },
   {
-    image: "/work/sentiment_viz.png",
+    image: "/work/fin_sentiment_ai.png",
     category: "ML and AI",
     name: "Fin-Insight: Financial Sentiment & Stock Correlation",
     description:
